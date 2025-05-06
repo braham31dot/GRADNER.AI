@@ -60,7 +60,7 @@ body {
 
 /* Close button */
 .close-button {
-  background-image: url('/assets/buttons/close-button.png');
+  background-image: url('close-button.png');
   background-size: contain;
   width: 32px;
   height: 32px;
