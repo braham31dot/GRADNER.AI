@@ -7,10 +7,10 @@
 
 /* Body Styling */
 body {
-  font-family: 'Press Start 2P', cursive; /* Minecraft-like font */
-  background-image: url('https://raw.githubusercontent.com/braham31dot/repository/main/background.png');
-  background-size: cover; /* Ensures it covers the entire body */
-  background-position: center; /* Keeps the image centered */
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('https://braham31dot.github.io/repository/assets/background.png');
+  background-size: cover;
+  background-position: center;
   color: #333;
   height: 100vh;
   display: flex;
@@ -18,7 +18,6 @@ body {
   justify-content: flex-start;
   padding: 0;
 }
-
 /* Donation Banner */
 #donation-banner {
   background-color: #8b4513; /* Brown banner */
@@ -61,7 +60,7 @@ body {
 
 /* Close button */
 .close-button {
-  background-image: url('https://raw.githubusercontent.com/braham31dot/repository/main/close-button.png');
+  background-image: url('https://braham31dot.github.io/repository/assets/buttons/close-button.png');
   background-size: contain;
   width: 32px;
   height: 32px;
@@ -101,7 +100,7 @@ body {
 
 /* Send button */
 #send-button {
-  background-image: url('https://raw.githubusercontent.com/braham31dot/repository/main/sendbutton.png');
+  background-image: url('https://braham31dot.github.io/repository/assets/buttons/sendbutton.png');
   background-size: contain;
   width: 32px;
   height: 32px;
