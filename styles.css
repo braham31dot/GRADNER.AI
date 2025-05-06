@@ -101,7 +101,7 @@ body {
 
 /* Send button */
 #send-button {
-  background-image: url('/assets/buttons/sendbutton.png');
+  background-image: url('sendbutton.png'); /* No need for full path */
   background-size: contain;
   width: 32px;
   height: 32px;
