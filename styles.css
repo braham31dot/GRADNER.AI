@@ -8,7 +8,7 @@
 /* Body Styling */
 body {
   font-family: 'Press Start 2P', cursive;
-  background-image: url('https://braham31dot.github.io/repository/assets/background.png');
+  background-image: url('/assets/background.png');
   background-size: cover;
   background-position: center;
   color: #333;
@@ -60,7 +60,7 @@ body {
 
 /* Close button */
 .close-button {
-  background-image: url('https://braham31dot.github.io/repository/assets/buttons/close-button.png');
+  background-image: url('/assets/buttons/close-button.png');
   background-size: contain;
   width: 32px;
   height: 32px;
@@ -68,6 +68,7 @@ body {
   cursor: pointer;
   background-repeat: no-repeat;
 }
+
 
 
 /* Chat Container */
@@ -100,7 +101,7 @@ body {
 
 /* Send button */
 #send-button {
-  background-image: url('https://braham31dot.github.io/repository/assets/buttons/sendbutton.png');
+  background-image: url('/assets/buttons/sendbutton.png');
   background-size: contain;
   width: 32px;
   height: 32px;
