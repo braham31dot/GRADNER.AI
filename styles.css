@@ -8,7 +8,7 @@
 /* Body Styling */
 body {
   font-family: 'Press Start 2P', cursive; /* Minecraft-like font */
-  background-image: url('./assets/background/background.png'); /* Set the real background here */
+  background-image: url('https://raw.githubusercontent.com/braham31dot/repository/main/background.png');
   background-size: cover; /* Ensures it covers the entire body */
   background-position: center; /* Keeps the image centered */
   color: #333;
@@ -61,14 +61,15 @@ body {
 
 /* Close button */
 .close-button {
-  background-image: url('./assets/buttons/close-button.png');
-  background-size: contain; /* Ensures the image scales properly */
-  width: 32px; /* Reduced size */
-  height: 32px; /* Reduced size */
+  background-image: url('https://raw.githubusercontent.com/braham31dot/repository/main/close-button.png');
+  background-size: contain;
+  width: 32px;
+  height: 32px;
   border: none;
   cursor: pointer;
-  background-repeat: no-repeat; /* Prevents repetition if the image is smaller */
+  background-repeat: no-repeat;
 }
+
 
 /* Chat Container */
 #chat-container {
@@ -100,10 +101,10 @@ body {
 
 /* Send button */
 #send-button {
-  background-image: url('./assets/buttons/sendbutton.png');
-  background-size: contain; /* Ensures the image scales properly */
-  width: 32px; /* Reduced size */
-  height: 32px; /* Reduced size */
+  background-image: url('https://raw.githubusercontent.com/braham31dot/repository/main/sendbutton.png');
+  background-size: contain;
+  width: 32px;
+  height: 32px;
   border: none;
   cursor: pointer;
   background-repeat: no-repeat;
