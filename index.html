@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4CAF50" /> <!-- Theme color for mobile devices -->
+  <meta name="description" content="Gardener.ai - Your AI assistant for all things plants and gardening." />
+  <meta property="og:title" content="Gardener.ai 🌿" />
+  <meta property="og:description" content="Gardener.ai is your ultimate AI companion for everything related to plants and gardening." />
+  <meta property="og:image" content="path/to/your/logo.png" />
+  <meta name="robots" content="index, follow" />
+  
+  <title>Gardener.ai 🌿</title>
+
+  <!-- Link to manifest.json -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Link to Kenney.nl's Pixel UI Pack CSS -->
+  <link rel="stylesheet" href="path/to/pixel-ui-pack.css" />
+
+  <!-- Link to your custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Link to Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch(error => {
+            console.error('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
+</head>
+<body>
+  <!-- Donation Banner -->
+  <div id="donation-banner">
+    <button id="donate-button">💸Pls Donate!</button> <!-- Changed the button text to make it clearer -->
+  </div>
+
+  <!-- Donation Modal -->
+  <div id="donation-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" id="close-donation-modal">-</span>
+      <iframe src="https://ko-fi.com/yourcharitypage" frameborder="0" style="width: 100%; height: 400px;"></iframe>
+    </div>
+  </div>
+
+  <!-- Chat Container -->
+  <div id="chat-container">
+    <div id="chat-box">
+      <!-- Chat messages will appear here -->
+    </div>
+    <div id="input-area">
+      <input type="file" id="image-input" accept="image/*" hidden />
+      <button id="upload-button">+</button>
+      <input type="text" id="user-input" placeholder="Ask about plants..." />
+      <button id="send-button"></button>
+    </div>
+  </div>
+
+  <!-- Link to your custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

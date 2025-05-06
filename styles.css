@@ -1,0 +1,134 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Press Start 2P', cursive; /* Minecraft-like font */
+  background-image: url('./assets/background/background.png'); /* Set the real background here */
+  background-size: cover; /* Ensures it covers the entire body */
+  background-position: center; /* Keeps the image centered */
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+/* Donation Banner */
+#donation-banner {
+  background-color: #8b4513; /* Brown banner */
+  padding: 10px;
+  text-align: center;
+}
+
+#donate-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  animation: walk 2s infinite;
+  cursor: pointer;
+}
+
+/* Donation Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Close button */
+.close-button {
+  background-image: url('./assets/buttons/close-button.png');
+  background-size: contain; /* Ensures the image scales properly */
+  width: 32px; /* Reduced size */
+  height: 32px; /* Reduced size */
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat; /* Prevents repetition if the image is smaller */
+}
+
+/* Chat Container */
+#chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#chat-box {
+  flex: 1;
+  border: 2px solid #000;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #f0e68c; /* Light yellow background */
+  margin-bottom: 10px;
+}
+
+#input-area {
+  display: flex;
+  align-items: center;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Send button */
+#send-button {
+  background-image: url('./assets/buttons/sendbutton.png');
+  background-size: contain; /* Ensures the image scales properly */
+  width: 32px; /* Reduced size */
+  height: 32px; /* Reduced size */
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+/* Animation for donation button */
+@keyframes walk {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Fade-in animation for chat messages */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
