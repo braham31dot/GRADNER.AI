@@ -51,7 +51,6 @@ function appendMessage(from, msg) {
 }
 
 // Config
-const API_KEY = '';
 const API_URL = 'https://api.openai.com/v1/chat/completions';
 const MAX_IMAGES_PER_DAY = 3;
 
@@ -86,10 +85,10 @@ async function sendTextToAI(userMessage) {
 
   showLoader();
   try {
-    const response = await fetch(API_URL, {
+    const response = await fetch('/api/openai', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${API_KEY}`,
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`, // Use environment variable for API Key
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -135,10 +134,10 @@ async function handleImageUpload(file) {
 
     showLoader();
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch('/api/openai', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${API_KEY}`,
+          'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`, // Use environment variable for API Key
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
