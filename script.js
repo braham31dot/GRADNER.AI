@@ -51,7 +51,7 @@ function appendMessage(from, msg) {
 }
 
 // Config
-const API_KEY = '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';
+const API_KEY = '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';
 const API_URL = 'https://api.openai.com/v1/chat/completions';
 const MAX_IMAGES_PER_DAY = 3;
 
