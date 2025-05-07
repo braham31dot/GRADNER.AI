@@ -84,15 +84,12 @@ async function sendTextToAI(userMessage) {
   }
 
   showLoader();
+
   try {
     const response = await fetch('/api/openai', {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`, // Use environment variable for API Key
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'gpt-4-turbo',
         messages: [
           { role: 'system', content: 'You are a plant expert AI. Use emojis like 🌿☀️💧🌸🪴 to keep answers short, helpful, and friendly.' },
           { role: 'user', content: userMessage }
@@ -102,15 +99,16 @@ async function sendTextToAI(userMessage) {
 
     const data = await response.json();
     hideLoader();
-    if (data.choices && data.choices.length > 0) {
-      appendMessage('ai', data.choices[0].message.content);
+
+    if (response.ok && data.reply) {
+      appendMessage('ai', data.reply);
     } else {
-      appendMessage('ai', '❌ No response from AI. Please try again.');
+      appendMessage('ai', '❌ Error: ' + (data.error || 'No reply received'));
     }
   } catch (err) {
     hideLoader();
-    console.error('Text API Error:', err);
-    appendMessage('ai', '❌ Error communicating with the AI.');
+    appendMessage('ai', '❌ Network error.');
+    console.error(err);
   }
 }
 
